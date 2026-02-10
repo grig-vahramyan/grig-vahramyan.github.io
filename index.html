@@ -1502,7 +1502,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-inner">
-      <p class="footer-copy">&copy; 2026 Grig Vahramyan. All rights reserved.</p>
+      <p class="footer-copy">&copy; <span id="current-year"></span> Grig Vahramyan. All rights reserved.</p>
       <a href="#hero" class="footer-back-top">
         Back to Top <i class="fa-solid fa-arrow-up"></i>
       </a>
@@ -1511,6 +1511,9 @@
 
   <!-- ===== JAVASCRIPT ===== -->
   <script>
+    // ---- Current year (footer) ----
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
     // ---- Loading Screen ----
     window.addEventListener('load', () => {
       setTimeout(() => {
